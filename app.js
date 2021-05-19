@@ -12,10 +12,8 @@ app.get('/', (req, res) => {
 
 app.post('/webhook', express.text(), (req, res) => {
 	console.log(req.headers);
-	console.log(JSON.parse(req.body));
-	// console.log(JSON.stringify(req.headers.authorization))
-	// console.log(JSON.stringify(req.body))
-	// console.log(JSON.parse(req.body))
+	console.log(req.body)
+	console.log(JSON.stringify(req.body))
 	return res.json({
 		success: true,
 		message: 'success'
